@@ -187,17 +187,17 @@
 
   // ── Currency switcher ────────────────────────────────────────
   const CURRENCIES = {
-    NZD: { rate: 1,      symbol: 'NZ$' },
-    USD: { rate: 0.59,   symbol: 'US$' },
-    AUD: { rate: 0.90,   symbol: 'A$'  },
-    GBP: { rate: 0.46,   symbol: '£'   },
-    EUR: { rate: 0.54,   symbol: '€'   },
-    LKR: { rate: 195,    symbol: 'Rs'  },
-    SGD: { rate: 0.80,   symbol: 'S$'  },
-    CAD: { rate: 0.81,   symbol: 'CA$' },
+    USD: { rate: 1,     symbol: 'US$' },
+    NZD: { rate: 1.69,  symbol: 'NZ$' },
+    AUD: { rate: 1.52,  symbol: 'A$'  },
+    GBP: { rate: 0.79,  symbol: '£'   },
+    EUR: { rate: 0.92,  symbol: '€'   },
+    LKR: { rate: 330,   symbol: 'Rs'  },
+    SGD: { rate: 1.35,  symbol: 'S$'  },
+    CAD: { rate: 1.37,  symbol: 'CA$' },
   }
   const currencySelect = document.getElementById('currency-select')
-  const priceAmounts   = document.querySelectorAll('.price-amount[data-nzd]')
+  const priceAmounts   = document.querySelectorAll('.price-amount[data-usd]')
   const priceSymbols   = document.querySelectorAll('.price-currency')
 
   function fmt(n) {
@@ -208,7 +208,7 @@
     currencySelect.addEventListener('change', () => {
       const cur = CURRENCIES[currencySelect.value]
       priceAmounts.forEach(el => {
-        el.textContent = fmt(parseFloat(el.dataset.nzd) * cur.rate)
+        el.textContent = fmt(parseFloat(el.dataset.usd) * cur.rate)
       })
       priceSymbols.forEach(el => { el.textContent = cur.symbol })
     })
