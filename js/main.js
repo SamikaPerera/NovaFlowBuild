@@ -185,6 +185,37 @@
     })
   })
 
+  // ── Currency switcher ────────────────────────────────────────
+  const CURRENCIES = {
+    NZD: { rate: 1,      symbol: 'NZ$' },
+    USD: { rate: 0.59,   symbol: 'US$' },
+    AUD: { rate: 0.90,   symbol: 'A$'  },
+    GBP: { rate: 0.46,   symbol: '£'   },
+    EUR: { rate: 0.54,   symbol: '€'   },
+    LKR: { rate: 195,    symbol: 'Rs'  },
+    SGD: { rate: 0.80,   symbol: 'S$'  },
+    CAD: { rate: 0.81,   symbol: 'CA$' },
+  }
+  const currencyBtns  = document.querySelectorAll('.currency-btn')
+  const priceAmounts  = document.querySelectorAll('.price-amount[data-nzd]')
+  const priceSymbols  = document.querySelectorAll('.price-currency')
+
+  function fmt(n) {
+    return n >= 1000 ? n.toLocaleString('en', { maximumFractionDigits: 0 }) : Math.round(n).toString()
+  }
+
+  currencyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currencyBtns.forEach(b => b.classList.remove('active'))
+      btn.classList.add('active')
+      const cur = CURRENCIES[btn.dataset.currency]
+      priceAmounts.forEach(el => {
+        el.textContent = fmt(parseFloat(el.dataset.nzd) * cur.rate)
+      })
+      priceSymbols.forEach(el => { el.textContent = cur.symbol })
+    })
+  })
+
   // ── Smooth scroll for anchor links ──────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {

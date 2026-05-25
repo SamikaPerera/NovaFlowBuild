@@ -280,6 +280,21 @@
 
     </div>
 
+    <!-- Currency Switcher -->
+    <div class="currency-switcher reveal">
+      <span class="currency-label">Show prices in:</span>
+      <div class="currency-options">
+        <button class="currency-btn active" data-currency="NZD">NZ$</button>
+        <button class="currency-btn" data-currency="USD">US$</button>
+        <button class="currency-btn" data-currency="AUD">A$</button>
+        <button class="currency-btn" data-currency="GBP">£ GBP</button>
+        <button class="currency-btn" data-currency="EUR">€ EUR</button>
+        <button class="currency-btn" data-currency="LKR">Rs LKR</button>
+        <button class="currency-btn" data-currency="SGD">S$</button>
+        <button class="currency-btn" data-currency="CAD">CA$</button>
+      </div>
+    </div>
+
     <div class="pricing-grid">
 
       <!-- PROJECT PACKAGES (2-col) -->
@@ -291,7 +306,7 @@
           <div class="plan-headline">Website Development</div>
           <div class="plan-desc">Perfect for small businesses, freelancers, and personal brands needing a strong online presence — pay once, own it forever.</div>
           <div class="plan-price">
-            <span class="price-currency">$</span><span class="price-amount">149</span>
+            <span class="price-currency">NZ$</span><span class="price-amount" data-nzd="149">149</span>
             <span class="price-period">from</span>
           </div>
           <div class="price-note">One-time payment · No recurring fees</div>
@@ -314,7 +329,7 @@
           <div class="plan-headline">Custom Application</div>
           <div class="plan-desc">Web apps, SaaS platforms, and complex systems with full backend. Final price depends on what you need to build.</div>
           <div class="plan-price">
-            <span class="price-currency">$</span><span class="price-amount">349</span>
+            <span class="price-currency">NZ$</span><span class="price-amount" data-nzd="349">349</span>
             <span class="price-period">from</span>
           </div>
           <div class="price-note">Custom quote based on your project</div>
@@ -345,7 +360,7 @@
           <div class="plan-headline">Website Care Plan</div>
           <div class="plan-desc">After your website is built, keep it updated for a flat $49/month. Any standard change is included — no nickel-and-diming. If a request needs extra work, I'll quote you before touching anything.</div>
           <div class="plan-price">
-            <span class="price-currency">$</span><span class="price-amount">49</span>
+            <span class="price-currency">NZ$</span><span class="price-amount" data-nzd="49">49</span>
             <span class="price-period">/mo</span>
           </div>
           <div class="price-note">Flat monthly rate · Complex work quoted upfront</div>
@@ -369,35 +384,9 @@
     </div>
 
     <p class="pricing-note reveal">
-      Need something specific? <a href="#quote">Request a custom quote</a> — most projects are unique and pricing reflects that.
+      Need something specific? <a href="#quote">Request a custom quote</a> — most projects are unique and pricing reflects that.<br>
+      <span style="font-size:12px;opacity:0.6">* All prices are in NZD. Other currencies shown are approximate conversions for reference only.</span>
     </p>
-
-    <!-- Add-ons -->
-    <div style="margin-top:60px" class="reveal">
-      <div class="tag" style="justify-content:center;margin:0 auto 24px">ADD-ONS</div>
-      <div class="addons-grid">
-        <div class="service-card" style="text-align:center">
-          <div style="font-size:1.4rem;margin-bottom:10px">🔒</div>
-          <div style="font-weight:600;font-size:14px;margin-bottom:6px">SSL + Hosting Setup</div>
-          <div style="color:var(--teal);font-family:var(--mono);font-size:13px">+$149</div>
-        </div>
-        <div class="service-card" style="text-align:center">
-          <div style="font-size:1.4rem;margin-bottom:10px">🌐</div>
-          <div style="font-weight:600;font-size:14px;margin-bottom:6px">Domain + DNS Config</div>
-          <div style="color:var(--teal);font-family:var(--mono);font-size:13px">+$99</div>
-        </div>
-        <div class="service-card" style="text-align:center">
-          <div style="font-size:1.4rem;margin-bottom:10px">📊</div>
-          <div style="font-weight:600;font-size:14px;margin-bottom:6px">Analytics Dashboard</div>
-          <div style="color:var(--teal);font-family:var(--mono);font-size:13px">+$299</div>
-        </div>
-        <div class="service-card" style="text-align:center">
-          <div style="font-size:1.4rem;margin-bottom:10px">🔄</div>
-          <div style="font-weight:600;font-size:14px;margin-bottom:6px">Monthly Maintenance</div>
-          <div style="color:var(--teal);font-family:var(--mono);font-size:13px">$199/mo</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
