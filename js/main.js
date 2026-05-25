@@ -196,25 +196,23 @@
     SGD: { rate: 0.80,   symbol: 'S$'  },
     CAD: { rate: 0.81,   symbol: 'CA$' },
   }
-  const currencyBtns  = document.querySelectorAll('.currency-btn')
-  const priceAmounts  = document.querySelectorAll('.price-amount[data-nzd]')
-  const priceSymbols  = document.querySelectorAll('.price-currency')
+  const currencySelect = document.getElementById('currency-select')
+  const priceAmounts   = document.querySelectorAll('.price-amount[data-nzd]')
+  const priceSymbols   = document.querySelectorAll('.price-currency')
 
   function fmt(n) {
     return n >= 1000 ? n.toLocaleString('en', { maximumFractionDigits: 0 }) : Math.round(n).toString()
   }
 
-  currencyBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      currencyBtns.forEach(b => b.classList.remove('active'))
-      btn.classList.add('active')
-      const cur = CURRENCIES[btn.dataset.currency]
+  if (currencySelect) {
+    currencySelect.addEventListener('change', () => {
+      const cur = CURRENCIES[currencySelect.value]
       priceAmounts.forEach(el => {
         el.textContent = fmt(parseFloat(el.dataset.nzd) * cur.rate)
       })
       priceSymbols.forEach(el => { el.textContent = cur.symbol })
     })
-  })
+  }
 
   // ── Smooth scroll for anchor links ──────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {

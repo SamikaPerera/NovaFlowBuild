@@ -283,16 +283,16 @@
     <!-- Currency Switcher -->
     <div class="currency-switcher reveal">
       <span class="currency-label">Show prices in:</span>
-      <div class="currency-options">
-        <button class="currency-btn active" data-currency="NZD">NZ$</button>
-        <button class="currency-btn" data-currency="USD">US$</button>
-        <button class="currency-btn" data-currency="AUD">A$</button>
-        <button class="currency-btn" data-currency="GBP">£ GBP</button>
-        <button class="currency-btn" data-currency="EUR">€ EUR</button>
-        <button class="currency-btn" data-currency="LKR">Rs LKR</button>
-        <button class="currency-btn" data-currency="SGD">S$</button>
-        <button class="currency-btn" data-currency="CAD">CA$</button>
-      </div>
+      <select class="currency-select" id="currency-select">
+        <option value="NZD">NZD — New Zealand Dollar (NZ$)</option>
+        <option value="USD">USD — US Dollar (US$)</option>
+        <option value="AUD">AUD — Australian Dollar (A$)</option>
+        <option value="GBP">GBP — British Pound (£)</option>
+        <option value="EUR">EUR — Euro (€)</option>
+        <option value="LKR">LKR — Sri Lankan Rupee (Rs)</option>
+        <option value="SGD">SGD — Singapore Dollar (S$)</option>
+        <option value="CAD">CAD — Canadian Dollar (CA$)</option>
+      </select>
     </div>
 
     <div class="pricing-grid">
