@@ -562,6 +562,35 @@
       background: var(--teal);
     }
 
+    .hero-services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .hero-svc-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-family: var(--sans);
+      font-weight: 500;
+      color: var(--white-70);
+      padding: 9px 12px;
+      background: rgba(15,212,180,0.04);
+      border: 1px solid rgba(15,212,180,0.09);
+      border-radius: 8px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .hero-svc-item:hover {
+      border-color: rgba(15,212,180,0.25);
+      color: var(--white);
+    }
+    .hero-svc-check {
+      color: var(--teal);
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
     .hero-scroll {
       position: absolute;
       bottom: 40px; left: 50%;
