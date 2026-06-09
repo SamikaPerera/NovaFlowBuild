@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
 </head>
 <body>
 
@@ -786,6 +787,47 @@
      JAVASCRIPT
 ════════════════════════════════════════════════════════════ -->
 <script src="js/main.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NOVA AI CHAT WIDGET
+════════════════════════════════════════════════════════════ -->
+<div id="chat-widget">
+
+  <!-- Chat window -->
+  <div id="chat-window">
+    <div id="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-avatar">N</div>
+        <div>
+          <div class="chat-bot-name">Nova</div>
+          <div class="chat-bot-status">AI Assistant · NovaFlow</div>
+        </div>
+      </div>
+      <button id="chat-close" aria-label="Close chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="chat-messages"></div>
+
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything…" autocomplete="off" />
+      <button id="chat-send" aria-label="Send message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toggle button -->
+  <button id="chat-toggle" aria-label="Chat with Nova">
+    <!-- Chat bubble icon (shown when closed) -->
+    <svg class="icon-chat" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+    <!-- Close icon (shown when open) -->
+    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+</div>
+<script src="js/chatbot.js"></script>
 
 <!-- WhatsApp Float Button -->
 <a href="https://wa.me/64225081575?text=Hi!%20I'm%20interested%20in%20your%20web%20development%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
