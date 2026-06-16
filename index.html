@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NovaFlow — Web & AI Development Agency. We build websites, web apps, AI chatbots, and workflow automations that grow your business." />
+  <meta property="og:title" content="NovaFlow — Web & AI Development Agency" />
+  <meta property="og:description" content="From high-converting websites to AI-powered automation — we design, build, and deploy digital products that get results." />
+  <title>NovaFlow — Web & AI Development Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- <link rel="stylesheet" href="css/chatbot.css" /> -->
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo-text">Nova<em>Flow</em></div>
+  <div class="loader-track"><div class="loader-fill" id="loader-fill"></div></div>
+  <div class="loader-pct" id="loader-pct">0%</div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+  <div class="nav-logo">Nova<em>Flow</em></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#quote">Quote</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#quote" class="nav-cta">Get a Quote →</a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#pricing" class="mob-link">Pricing</a>
+  <a href="#quote" class="mob-link">Get a Quote</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="dot"></div>
+        WEB &amp; AI DEVELOPMENT AGENCY
+        <span class="hero-avail-badge">✦ Available for projects</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="line-break">We build digital</span>
+        <span class="line-break">products that <em>grow</em></span>
+        <span class="line-break">your business.</span>
+      </h1>
+      <p class="hero-desc">
+        From high-converting websites to AI-powered automation — we design, build, and deploy digital solutions that turn visitors into clients.
+      </p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">Get a Free Quote →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-num">40+</div>
+            <div class="trust-label">Projects delivered</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">98%</div>
+            <div class="trust-label">Client satisfaction</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">3yr</div>
+            <div class="trust-label">Experience</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">24h</div>
+            <div class="trust-label">Response time</div>
+          </div>
+        </div>
+        <div class="hero-services">
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>Web Development</div>
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>E-Commerce Stores</div>
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>Web Apps &amp; SaaS</div>
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>AI Chatbots &amp; Assistants</div>
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>Workflow Automation</div>
+          <div class="hero-svc-item"><span class="hero-svc-check">✓</span>Design to Code</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">SCROLL</span>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>React</span><span class="sep">✦</span>
+    <span>Node.js</span><span class="sep">✦</span>
+    <span>TypeScript</span><span class="sep">✦</span>
+    <span>Next.js</span><span class="sep">✦</span>
+    <span>OpenAI</span><span class="sep">✦</span>
+    <span>AI Automation</span><span class="sep">✦</span>
+    <span>PostgreSQL</span><span class="sep">✦</span>
+    <span>Tailwind CSS</span><span class="sep">✦</span>
+    <span>n8n</span><span class="sep">✦</span>
+    <span>REST APIs</span><span class="sep">✦</span>
+    <span>AWS</span><span class="sep">✦</span>
+    <span>Python</span><span class="sep">✦</span>
+    <span>Figma → Code</span><span class="sep">✦</span>
+    <span>MongoDB</span><span class="sep">✦</span>
+    <span>GraphQL</span><span class="sep">✦</span>
+    <span>Docker</span><span class="sep">✦</span>
+    <!-- repeat -->
+    <span>React</span><span class="sep">✦</span>
+    <span>Node.js</span><span class="sep">✦</span>
+    <span>TypeScript</span><span class="sep">✦</span>
+    <span>Next.js</span><span class="sep">✦</span>
+    <span>OpenAI</span><span class="sep">✦</span>
+    <span>AI Automation</span><span class="sep">✦</span>
+    <span>PostgreSQL</span><span class="sep">✦</span>
+    <span>Tailwind CSS</span><span class="sep">✦</span>
+    <span>n8n</span><span class="sep">✦</span>
+    <span>REST APIs</span><span class="sep">✦</span>
+    <span>AWS</span><span class="sep">✦</span>
+    <span>Python</span><span class="sep">✦</span>
+    <span>Figma → Code</span><span class="sep">✦</span>
+    <span>MongoDB</span><span class="sep">✦</span>
+    <span>GraphQL</span><span class="sep">✦</span>
+    <span>Docker</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <div class="tag reveal">WHAT WE BUILD</div>
+        <h2 class="section-heading reveal reveal-delay-1">
+          Every type of<br><em>web solution</em><br>you need.
+        </h2>
+      </div>
+      <div>
+        <p class="section-sub reveal reveal-delay-2">
+          From sleek marketing sites to complex full-stack applications — we handle the full lifecycle: design, development, deployment, and ongoing support.
+        </p>
+        <div style="margin-top:28px" class="reveal reveal-delay-3">
+          <a href="#pricing" class="btn-outline">See Pricing →</a>
+        </div>
+      </div>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="service-icon">🖥️</span>
+        <h3 class="service-name">Landing <em>Pages</em></h3>
+        <p class="service-desc">High-converting, pixel-perfect marketing pages that make your first impression count. Built for speed and SEO from the ground up.</p>
+        <div class="service-stack">
+          <span class="stack-chip">Next.js</span>
+          <span class="stack-chip">Tailwind</span>
+          <span class="stack-chip">Framer Motion</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛒</span>
+        <h3 class="service-name">E-Commerce <em>Stores</em></h3>
+        <p class="service-desc">Custom-built online stores or Shopify/WooCommerce integrations with smooth checkout flows that drive sales.</p>
+        <div class="service-stack">
+          <span class="stack-chip">React</span>
+          <span class="stack-chip">Stripe</span>
+          <span class="stack-chip">Shopify API</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⚡</span>
+        <h3 class="service-name">Web <em>Applications</em></h3>
+        <p class="service-desc">Full-stack SaaS platforms, dashboards, and tools with authentication, databases, and real-time features.</p>
+        <div class="service-stack">
+          <span class="stack-chip">React</span>
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔌</span>
+        <h3 class="service-name">API <em>Development</em></h3>
+        <p class="service-desc">Scalable REST or GraphQL APIs, third-party integrations, webhooks, and backend architecture designed to grow.</p>
+        <div class="service-stack">
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">GraphQL</span>
+          <span class="stack-chip">AWS</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📐</span>
+        <h3 class="service-name">Design to <em>Code</em></h3>
+        <p class="service-desc">Have a Figma design or rough mockup? We'll turn it into a pixel-perfect, responsive, and animated website.</p>
+        <div class="service-stack">
+          <span class="stack-chip">Figma</span>
+          <span class="stack-chip">GSAP</span>
+          <span class="stack-chip">CSS3</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3 class="service-name">Maintenance <em>&amp; Support</em></h3>
+        <p class="service-desc">Ongoing site updates, performance monitoring, security patches, and feature additions on a monthly retainer.</p>
+        <div class="service-stack">
+          <span class="stack-chip">CI/CD</span>
+          <span class="stack-chip">Docker</span>
+          <span class="stack-chip">Monitoring</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🤖</span>
+        <h3 class="service-name">AI &amp; <em>Automation</em></h3>
+        <p class="service-desc">Integrate AI chatbots, automate repetitive workflows, and add intelligent features to your business — saving time and cutting manual work.</p>
+        <div class="service-stack">
+          <span class="stack-chip">OpenAI</span>
+          <span class="stack-chip">n8n</span>
+          <span class="stack-chip">Python</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROCESS
+════════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="tag reveal">HOW IT WORKS</div>
+    <h2 class="section-heading reveal reveal-delay-1">Simple, <em>transparent</em> process.</h2>
+    <p class="section-sub reveal reveal-delay-2">No confusing jargon. No surprise costs. Just a straightforward path from idea to live website.</p>
+    <div class="process-grid">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-circle">01</div>
+        <h3 class="step-title">Discovery Call</h3>
+        <p class="step-desc">Free 30-minute call to understand your goals, audience, timeline, and budget. No pressure, just clarity.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-circle">02</div>
+        <h3 class="step-title">Proposal & Quote</h3>
+        <p class="step-desc">You receive a detailed scope document with fixed pricing, timeline, and deliverables within 24 hours.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-circle">03</div>
+        <h3 class="step-title">Build & Review</h3>
+        <p class="step-desc">We build in sprints with regular check-ins. You see progress every step. Two rounds of revisions included.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-circle">04</div>
+        <h3 class="step-title">Launch & Support</h3>
+        <p class="step-desc">Go live with confidence. We handle deployment, testing, and provide 30 days of free post-launch support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRICING
+════════════════════════════════════════════════════════════ -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="tag reveal" style="justify-content:center;margin:0 auto 12px">PRICING</div>
+      <h2 class="section-heading reveal reveal-delay-1" style="max-width:560px;margin:0 auto 12px">
+        Transparent pricing.<br><em>No surprises.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2" style="margin:0 auto;text-align:center">
+        Fixed-price packages with everything you need. Upgrade, downgrade, or go custom — always your choice.
+      </p>
+
+    </div>
+
+    <!-- Currency Switcher -->
+    <div class="currency-switcher reveal">
+      <span class="currency-label">Show prices in:</span>
+      <select class="currency-select" id="currency-select">
+        <option value="USD">USD — US Dollar (US$)</option>
+        <option value="NZD">NZD — New Zealand Dollar (NZ$)</option>
+        <option value="AUD">AUD — Australian Dollar (A$)</option>
+        <option value="GBP">GBP — British Pound (£)</option>
+        <option value="EUR">EUR — Euro (€)</option>
+        <option value="LKR">LKR — Sri Lankan Rupee (Rs)</option>
+        <option value="SGD">SGD — Singapore Dollar (S$)</option>
+        <option value="CAD">CAD — Canadian Dollar (CA$)</option>
+      </select>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- PROJECT PACKAGES (2-col) -->
+      <div class="pricing-project-row">
+
+        <!-- ONE-TIME WEBSITE -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="plan-name">ONE-TIME</div>
+          <div class="plan-headline">Website Development</div>
+          <div class="plan-desc">Perfect for small businesses, freelancers, and personal brands needing a strong online presence — pay once, own it forever.</div>
+          <div class="plan-price">
+            <span class="price-currency">US$</span><span class="price-amount" data-usd="195">195</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">One-time payment · No recurring fees</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Custom design tailored to your brand</li>
+            <li><span class="check">✓</span> Mobile responsive &amp; fast</li>
+            <li><span class="check">✓</span> Contact form with email integration</li>
+            <li><span class="check">✓</span> Basic SEO setup</li>
+            <li><span class="check">✓</span> Google Analytics integration</li>
+            <li><span class="check">✓</span> Quick turnaround</li>
+            <li><span class="check">✓</span> Post-launch support</li>
+            <li class="muted"><span class="check">—</span> Changes billed per scope</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Get Started →</a>
+        </div>
+
+        <!-- FULL-STACK -->
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="plan-name">FULL-STACK</div>
+          <div class="plan-headline">Custom Application</div>
+          <div class="plan-desc">Web apps, SaaS platforms, and complex systems with full backend. Final price depends on what you need to build.</div>
+          <div class="plan-price">
+            <span class="price-currency">US$</span><span class="price-amount" data-usd="295">295</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">Custom quote based on your project</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Full backend: Node.js + database</li>
+            <li><span class="check">✓</span> User auth, dashboards, payments</li>
+            <li><span class="check">✓</span> REST or GraphQL API</li>
+            <li><span class="check">✓</span> Cloud deployment</li>
+            <li><span class="check">✓</span> Admin panel</li>
+            <li><span class="check">✓</span> Scalable architecture</li>
+            <li><span class="check">✓</span> Price varies by complexity</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Let's Talk →</a>
+        </div>
+
+      </div>
+
+      <!-- AI & AUTOMATION DIVIDER -->
+      <div class="pricing-row-divider reveal">
+        <span>AI &amp; Automation</span>
+      </div>
+
+      <!-- AI PACKAGES (2-col) -->
+      <div class="pricing-project-row">
+
+        <!-- AI CHATBOT -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="plan-name">AI CHATBOT</div>
+          <div class="plan-headline">Smart Assistant</div>
+          <div class="plan-desc">A custom AI chatbot trained on your business data — handles FAQs, captures leads, and supports customers 24/7 without lifting a finger.</div>
+          <div class="plan-price">
+            <span class="price-currency">US$</span><span class="price-amount" data-usd="295">295</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">One-time setup · API costs billed separately</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Trained on your content &amp; FAQs</li>
+            <li><span class="check">✓</span> Embedded widget on your website</li>
+            <li><span class="check">✓</span> Lead capture &amp; CRM handoff</li>
+            <li><span class="check">✓</span> Custom personality &amp; tone</li>
+            <li><span class="check">✓</span> Conversation history</li>
+            <li><span class="check">✓</span> Mobile-friendly</li>
+            <li class="muted"><span class="check">—</span> OpenAI / Claude API costs separate</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Get Started →</a>
+        </div>
+
+        <!-- WORKFLOW AUTOMATION -->
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="plan-name">AUTOMATION</div>
+          <div class="plan-headline">Workflow Automation</div>
+          <div class="plan-desc">Automate your business processes — from lead routing and email sequences to data syncing and reporting. Stop doing manually what a machine can handle.</div>
+          <div class="plan-price">
+            <span class="price-currency">US$</span><span class="price-amount" data-usd="395">395</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">Price scales with complexity</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Multi-step workflow design</li>
+            <li><span class="check">✓</span> App integrations (CRM, Slack, email)</li>
+            <li><span class="check">✓</span> Trigger-based notifications</li>
+            <li><span class="check">✓</span> Data sync between platforms</li>
+            <li><span class="check">✓</span> Error handling &amp; monitoring</li>
+            <li><span class="check">✓</span> Full documentation included</li>
+            <li class="muted"><span class="check">—</span> Custom quote for complex flows</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Let's Talk →</a>
+        </div>
+
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="pricing-row-divider reveal">
+        <span>Ongoing Retainer</span>
+      </div>
+
+      <!-- MONTHLY PLAN (full-width horizontal) -->
+      <div class="pricing-card featured pricing-card-monthly reveal">
+        <div class="featured-badge">BEST VALUE</div>
+        <div class="monthly-left">
+          <div class="plan-name">MONTHLY RETAINER</div>
+          <div class="plan-headline">Website Care Plan</div>
+          <div class="plan-desc">After your website is built, keep it updated for a flat $29/month. Any standard change is included — no nickel-and-diming. If a request needs extra work, we'll quote you before touching anything.</div>
+          <div class="plan-price">
+            <span class="price-currency">US$</span><span class="price-amount" data-usd="29">29</span>
+            <span class="price-period">/mo</span>
+          </div>
+          <div class="price-note">Flat monthly rate · Complex work quoted upfront</div>
+          <a href="#quote" class="plan-cta primary">Get Started →</a>
+        </div>
+        <div class="monthly-divider"></div>
+        <div class="monthly-right">
+          <ul class="features-list">
+            <li><span class="check">✓</span> Any standard changes included</li>
+            <li><span class="check">✓</span> Text, images &amp; layout updates</li>
+            <li><span class="check">✓</span> New sections or pages</li>
+            <li><span class="check">✓</span> Bug fixes &amp; tweaks</li>
+            <li><span class="check">✓</span> Priority turnaround</li>
+            <li><span class="check">✓</span> Direct communication</li>
+            <li><span class="check">✓</span> Cancel anytime</li>
+            <li class="muted"><span class="check">—</span> Complex work quoted before billing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="pricing-row-divider reveal">
+        <span>Quick &amp; Fixed Services</span>
+      </div>
+
+      <!-- QUICK SERVICES (2×2 grid) -->
+      <div class="pricing-project-row">
+
+        <!-- GOOGLE BUSINESS SETUP -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="plan-name">LOCAL SEO</div>
+          <div class="plan-headline">Google Business Setup</div>
+          <div class="plan-desc">Get your business showing up on Google Maps and local search results. Most customers search online before visiting — make sure they find you first.</div>
+          <div class="plan-price">
+            <span class="price-currency">NZ$</span><span class="price-amount">150</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">One-time setup · Results in 24 hours</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Google Business Profile setup</li>
+            <li><span class="check">✓</span> Business info optimised</li>
+            <li><span class="check">✓</span> Photos and services added</li>
+            <li><span class="check">✓</span> Shows up on Google Maps</li>
+            <li><span class="check">✓</span> Review management setup</li>
+            <li><span class="check">✓</span> Done in 24 hours</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Get Listed →</a>
+        </div>
+
+        <!-- SEO SETUP -->
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="plan-name">SEARCH ENGINE</div>
+          <div class="plan-headline">SEO Setup</div>
+          <div class="plan-desc">Get your website ranking higher on Google so more customers find you without paying for ads. One-time setup with long term results.</div>
+          <div class="plan-price">
+            <span class="price-currency">NZ$</span><span class="price-amount">200</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">One-time setup · Long-term organic results</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Keyword research</li>
+            <li><span class="check">✓</span> On-page SEO optimisation</li>
+            <li><span class="check">✓</span> Meta titles and descriptions</li>
+            <li><span class="check">✓</span> Google Analytics setup</li>
+            <li><span class="check">✓</span> Speed optimisation</li>
+            <li><span class="check">✓</span> Monthly report included</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Boost Rankings →</a>
+        </div>
+
+      </div>
+
+      <div class="pricing-project-row">
+
+        <!-- LANDING PAGE 24HRS -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="plan-name">FAST DELIVERY</div>
+          <div class="plan-headline">Landing Page in 24hrs</div>
+          <div class="plan-desc">A high converting single page website built and delivered within 24 hours. Perfect for businesses running ads or launching a new offer fast.</div>
+          <div class="plan-price">
+            <span class="price-currency">NZ$</span><span class="price-amount">150</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">Delivered within 24 hours · Ready to launch</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> Delivered in 24 hours</li>
+            <li><span class="check">✓</span> Mobile responsive</li>
+            <li><span class="check">✓</span> Contact form included</li>
+            <li><span class="check">✓</span> Fast loading</li>
+            <li><span class="check">✓</span> Custom design</li>
+            <li><span class="check">✓</span> Unlimited revisions</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Get Started Fast →</a>
+        </div>
+
+        <!-- WHATSAPP BUSINESS SETUP -->
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="plan-name">QUICK SETUP</div>
+          <div class="plan-headline">WhatsApp Business Setup</div>
+          <div class="plan-desc">Set up a professional WhatsApp Business account with auto replies, product catalog and a professional profile. Never miss a customer message again.</div>
+          <div class="plan-price">
+            <span class="price-currency">NZ$</span><span class="price-amount">100</span>
+            <span class="price-period">from</span>
+          </div>
+          <div class="price-note">Same-day setup · No ongoing fees</div>
+          <ul class="features-list">
+            <li><span class="check">✓</span> WhatsApp Business account setup</li>
+            <li><span class="check">✓</span> Auto reply messages configured</li>
+            <li><span class="check">✓</span> Business profile completed</li>
+            <li><span class="check">✓</span> Product or service catalog added</li>
+            <li><span class="check">✓</span> Quick replies setup</li>
+            <li><span class="check">✓</span> Done in same day</li>
+          </ul>
+          <a href="#quote" class="plan-cta">Get Started →</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="pricing-note reveal">
+      Need something specific? <a href="#quote">Request a custom quote</a> — most projects are unique and pricing reflects that.<br>
+      <span style="font-size:12px;opacity:0.6">* All prices are in USD. Other currencies shown are approximate conversions for reference only.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section id="testimonials" class="section section-alt">
+  <div class="container">
+    <div class="tag reveal">CLIENT FEEDBACK</div>
+    <h2 class="section-heading reveal reveal-delay-1">What clients <em>say</em>.</h2>
+    <div class="testi-grid">
+
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Delivered our e-commerce store in under 3 weeks and it looks incredible. Our conversion rate jumped 34% in the first month. The attention to detail was beyond what we expected."</p>
+        <div class="testi-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#0fd4b4,#0891b2)">SL</div>
+          <div>
+            <div class="author-name">Sarah Liu</div>
+            <div class="author-role">Founder, StyleHaus</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Our SaaS dashboard was complex — real-time data, auth, Stripe billing. It was handled flawlessly. The code is clean, the docs are great, and the communication was top-tier throughout."</p>
+        <div class="testi-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#7b5ffd,#3d7fff)">MK</div>
+          <div>
+            <div class="author-name">Marcus Kim</div>
+            <div class="author-role">CEO, FlowMetrics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"We got a quote from 3 other developers — nobody matched the quality, speed, and price point. The site scored 97 on Lighthouse on day one. Genuinely impressive work."</p>
+        <div class="testi-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">JP</div>
+          <div>
+            <div class="author-name">James Park</div>
+            <div class="author-role">Director, Verdant Agency</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     QUOTE FORM
+════════════════════════════════════════════════════════════ -->
+<section id="quote" class="section">
+  <div class="container">
+    <div class="quote-wrap">
+      <div class="quote-left">
+        <div class="tag reveal">GET A QUOTE</div>
+        <h2 class="section-heading reveal reveal-delay-1">
+          Let's build<br>something<br><em>great together.</em>
+        </h2>
+        <p class="section-sub reveal reveal-delay-2">Fill in the form and we'll get back to you within 24 hours with a personalised quote and suggested approach.</p>
+
+        <div class="why-list" style="margin-top:36px">
+          <div class="why-item reveal reveal-delay-2">
+            <div class="why-icon">⚡</div>
+            <div>
+              <div class="why-title">Fast turnaround</div>
+              <div class="why-desc">Most projects delivered in 2–6 weeks. Rush delivery available on request.</div>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-3">
+            <div class="why-icon">💬</div>
+            <div>
+              <div class="why-title">Clear communication</div>
+              <div class="why-desc">Weekly updates, shared project board, and direct Slack access throughout.</div>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-4">
+            <div class="why-icon">🔒</div>
+            <div>
+              <div class="why-title">Fixed-price guarantee</div>
+              <div class="why-desc">Quoted price is final. No surprise invoices. Scope creep handled with a change order first.</div>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-5">
+            <div class="why-icon">🛡️</div>
+            <div>
+              <div class="why-title">Post-launch support</div>
+              <div class="why-desc">Every project includes free support period. You're never left alone after launch.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <form class="quote-form" id="quote-form" novalidate>
+          <div class="form-title">Tell us about your project</div>
+          <div class="form-sub">Free consultation, no obligation.</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>FIRST NAME *</label>
+              <input type="text" name="fname" placeholder="Alex" required />
+            </div>
+            <div class="form-group">
+              <label>LAST NAME *</label>
+              <input type="text" name="lname" placeholder="Johnson" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>EMAIL ADDRESS *</label>
+            <input type="email" name="email" placeholder="alex@yourcompany.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>COMPANY / BRAND NAME</label>
+            <input type="text" name="company" placeholder="Your Company Ltd." />
+          </div>
+
+          <div class="form-group">
+            <label>PROJECT TYPE *</label>
+            <select name="project_type" required>
+              <option value="" disabled selected>Select your project type</option>
+              <option value="landing">Landing Page / Marketing Site</option>
+              <option value="ecomm">E-Commerce Store</option>
+              <option value="webapp">Web Application / SaaS</option>
+              <option value="api">API / Backend Development</option>
+              <option value="redesign">Website Redesign</option>
+              <option value="maintenance">Maintenance / Support</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>SERVICES NEEDED</label>
+            <div class="services-check">
+              <label class="check-item"><input type="checkbox" name="svc" value="design"><div class="check-box">✓</div>UI/UX Design</label>
+              <label class="check-item"><input type="checkbox" name="svc" value="frontend"><div class="check-box">✓</div>Frontend Dev</label>
+              <label class="check-item"><input type="checkbox" name="svc" value="backend"><div class="check-box">✓</div>Backend / API</label>
+              <label class="check-item"><input type="checkbox" name="svc" value="database"><div class="check-box">✓</div>Database Design</label>
+              <label class="check-item"><input type="checkbox" name="svc" value="seo"><div class="check-box">✓</div>SEO Setup</label>
+              <label class="check-item"><input type="checkbox" name="svc" value="hosting"><div class="check-box">✓</div>Hosting / Deploy</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>BUDGET RANGE</label>
+            <div class="budget-options">
+              <div class="budget-opt" data-val="<1k">Under $1K</div>
+              <div class="budget-opt" data-val="1-3k">$1K – $3K</div>
+              <div class="budget-opt" data-val="3-8k">$3K – $8K</div>
+              <div class="budget-opt" data-val="8-20k">$8K – $20K</div>
+              <div class="budget-opt" data-val=">20k">$20K+</div>
+              <div class="budget-opt" data-val="unsure">Not sure</div>
+            </div>
+            <input type="hidden" name="budget" id="budget-hidden" />
+          </div>
+
+          <div class="form-group">
+            <label>TIMELINE</label>
+            <select name="timeline">
+              <option value="" disabled selected>When do you need this?</option>
+              <option value="asap">ASAP (Rush)</option>
+              <option value="1mo">Within 1 month</option>
+              <option value="3mo">1–3 months</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>TELL US ABOUT YOUR PROJECT *</label>
+            <textarea name="message" placeholder="Describe your project, goals, any references or competitors you like, and anything else relevant..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Send My Project Brief →
+          </button>
+          <div class="form-privacy">🔒 Your details are private. No spam, ever.</div>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Brief received!</div>
+          <p class="success-sub">Thanks for reaching out. We'll review your project and get back to you within 24 hours with a personalised quote.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════════ -->
+<section id="faq" class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="tag reveal" style="justify-content:center;margin:0 auto 12px">FAQ</div>
+      <h2 class="section-heading reveal reveal-delay-1" style="max-width:480px;margin:0 auto">Common <em>questions</em> answered.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q"><span>Do you work with clients outside your country?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Absolutely. We work with clients globally — fully remote. All communication is via Slack, email, or video call. Time zones are never an issue; we make it work.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q"><span>What's included in the post-launch support?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>The support period covers bug fixes, minor content changes, and technical questions. It doesn't cover new features or major redesigns — those are scoped separately.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span>How do payments work?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>50% upfront to start, 50% on delivery. For larger projects (Enterprise tier), we split into three milestones: 40% start, 30% mid-project, 30% on launch. Payments via bank transfer, PayPal, or Stripe.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q"><span>Can I see the code? Do I own it?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — full ownership on final payment. All code is handed over via a private GitHub repo. No lock-in, no licensing fees. It's yours completely.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span>What if I don't have a design?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No problem. We handle UI/UX design as part of most packages. We'll ask for your brand assets (logo, colours, fonts) and references, then create mockups for your approval before we build.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q"><span>How many revisions are included?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Every package includes 2 full rounds of revisions. Additional rounds are billed at $80/hour. Most projects are completed within the included revisions when a clear brief is provided upfront.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span>What tech stack do you use?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Frontend: React, Next.js, TypeScript, Tailwind. Backend: Node.js, Express, PostgreSQL, MongoDB. Deployment: AWS, Vercel, Railway. We pick the right tool for the job, not the trendy one.</p></div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q"><span>Can I upgrade my package later?</span><span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Of course. Many clients start with a Starter landing page and add features over time. We scope add-ons as new projects and keep everything consistent with the original codebase.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════════════════════════ -->
+<section id="cta-banner">
+  <div class="cta-ring"></div>
+  <div class="cta-ring"></div>
+  <div class="cta-ring"></div>
+  <div class="container cta-content">
+    <div class="cta-label reveal">READY TO START?</div>
+    <h2 class="cta-title reveal reveal-delay-1">
+      Your next website is<br>one conversation <em>away.</em>
+    </h2>
+    <p class="cta-sub reveal reveal-delay-2">Let's talk about your project — free, no-obligation consultation.</p>
+    <div class="cta-actions reveal reveal-delay-3">
+      <a href="#quote" class="btn-primary">Get a Free Quote →</a>
+      <a href="https://wa.me/64225081575?text=Hi!%20I'm%20interested%20in%20your%20web%20development%20services." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Me
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">Nova<em>Flow</em></div>
+        <p class="footer-desc">Full-stack web development for businesses that take their digital presence seriously.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" title="GitHub">⌥</a>
+          <a href="#" class="footer-social" title="LinkedIn">in</a>
+          <a href="#" class="footer-social" title="Twitter">𝕏</a>
+          <a href="#" class="footer-social" title="Dribbble">◉</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">SERVICES</div>
+        <ul class="footer-links">
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#services">E-Commerce</a></li>
+          <li><a href="#services">Web Applications</a></li>
+          <li><a href="#services">API Development</a></li>
+          <li><a href="#services">Maintenance</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">QUICK LINKS</div>
+        <ul class="footer-links">
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">CONTACT</div>
+        <ul class="footer-links">
+          <li><a href="mailto:novaflowbuil@gmail.com">novaflowbuil@gmail.com</a></li>
+          <li><a href="https://wa.me/64225081575?text=Hi!%20I'm%20interested%20in%20your%20web%20development%20services." target="_blank" rel="noopener noreferrer">WhatsApp: +64 22 508 1575</a></li>
+          <li><a href="#quote">Book a Call</a></li>
+          <li><a href="#">Response within 24h</a></li>
+        </ul>
+        <div style="margin-top:24px">
+          <div style="font-size:12px;color:var(--slate);margin-bottom:8px;letter-spacing:0.08em">AVAILABILITY</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);animation:pulse 2s ease-in-out infinite"></div>
+            Open for new projects
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 NovaFlow. Built by hand, with care.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════════ -->
+<script src="js/main.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NOVA AI CHAT WIDGET
+════════════════════════════════════════════════════════════ -->
+<div id="chat-widget">
+
+  <!-- Chat window -->
+  <div id="chat-window">
+    <div id="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-avatar">N</div>
+        <div>
+          <div class="chat-bot-name">Nova</div>
+          <div class="chat-bot-status">AI Assistant · NovaFlow</div>
+        </div>
+      </div>
+      <button id="chat-close" aria-label="Close chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="chat-messages"></div>
+
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask me anything…" autocomplete="off" />
+      <button id="chat-send" aria-label="Send message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toggle button -->
+  <button id="chat-toggle" aria-label="Chat with Nova">
+    <!-- Chat bubble icon (shown when closed) -->
+    <svg class="icon-chat" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+    <!-- Close icon (shown when open) -->
+    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+</div>
+<!-- <script src="js/chatbot.js"></script> -->
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/64225081575?text=Hi!%20I'm%20interested%20in%20your%20web%20development%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span>WhatsApp Me</span>
+</a>
+
+</body>
+</html>
