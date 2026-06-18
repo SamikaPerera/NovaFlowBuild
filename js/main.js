@@ -88,17 +88,6 @@
   setTimeout(() => document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible')), 2500)
 
 
-  // ── Budget selector ─────────────────────────────────────────
-  const budgetOpts   = document.querySelectorAll('.budget-opt')
-  const budgetHidden = document.getElementById('budget-hidden')
-  budgetOpts.forEach(opt => {
-    opt.addEventListener('click', () => {
-      budgetOpts.forEach(o => o.classList.remove('selected'))
-      opt.classList.add('selected')
-      budgetHidden.value = opt.dataset.val
-    })
-  })
-
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-item').forEach(item => {
     item.querySelector('.faq-q').addEventListener('click', () => {
@@ -167,7 +156,6 @@
       'Company: ' + get('company') + '\n' +
       'Project Type: ' + get('project_type') + '\n' +
       'Services: ' + svcs + '\n' +
-      'Budget: ' + get('budget') + '\n' +
       'Timeline: ' + get('timeline') + '\n\n' +
       'Message:\n' + get('message')
     )
