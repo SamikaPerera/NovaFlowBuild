@@ -114,6 +114,31 @@
     })
   })
 
+  // ── Pricing accordion ────────────────────────────────────────
+  const paItems = document.querySelectorAll('.pa-item')
+
+  function openPa(item) {
+    item.classList.add('pa-open')
+    item.querySelector('.pa-header').setAttribute('aria-expanded', 'true')
+    const body = item.querySelector('.pa-body')
+    body.style.maxHeight = body.scrollHeight + 'px'
+  }
+  function closePa(item) {
+    item.classList.remove('pa-open')
+    item.querySelector('.pa-header').setAttribute('aria-expanded', 'false')
+    item.querySelector('.pa-body').style.maxHeight = '0'
+  }
+
+  if (paItems.length) openPa(paItems[0])
+
+  paItems.forEach(item => {
+    item.querySelector('.pa-header').addEventListener('click', () => {
+      const isOpen = item.classList.contains('pa-open')
+      paItems.forEach(i => closePa(i))
+      if (!isOpen) openPa(item)
+    })
+  })
+
   // ── Quote form ───────────────────────────────────────────────
   const form    = document.getElementById('quote-form')
   const success = document.getElementById('form-success')

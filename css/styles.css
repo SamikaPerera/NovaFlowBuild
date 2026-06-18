@@ -2049,6 +2049,373 @@
     }
 
     /* ════════════════════════════════════════════════════════════
+       SERVICE CARDS — REDESIGN
+    ════════════════════════════════════════════════════════════ */
+    .svc-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(15,212,180,0.1);
+      border: 1px solid rgba(15,212,180,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      color: var(--teal);
+      flex-shrink: 0;
+      transition: background 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover .svc-icon-wrap {
+      background: rgba(15,212,180,0.16);
+      border-color: rgba(15,212,180,0.35);
+      box-shadow: 0 0 20px rgba(15,212,180,0.12);
+    }
+
+    /* Override legacy serif/em style for new plain titles */
+    .service-card .service-name {
+      font-family: var(--sans);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    /* Tighter, cleaner hover — replaces old subtle shadow */
+    .service-card:hover {
+      border-color: rgba(15,212,180,0.28);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.28), 0 0 0 1px rgba(15,212,180,0.1);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       PRICING ACCORDION
+    ════════════════════════════════════════════════════════════ */
+    .pricing-accordion {
+      margin-top: 52px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .pa-item {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: var(--navy-3);
+      transition: background 0.3s var(--ease);
+    }
+    .pa-item:last-child { border-bottom: none; }
+    .pa-item.pa-open { background: var(--navy-4); }
+
+    .pa-header {
+      width: 100%;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.25s;
+    }
+    .pa-header:hover { background: rgba(15,212,180,0.04); }
+
+    .pa-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pa-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      color: var(--teal);
+      background: var(--teal-dim);
+      border: 1px solid rgba(15,212,180,0.2);
+      border-radius: 20px;
+      padding: 3px 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .pa-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pa-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+
+    .pa-price-compact {
+      font-size: 13px;
+      color: var(--slate);
+      white-space: nowrap;
+    }
+    .pa-price-compact strong {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--white);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .pa-arrow {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--slate);
+      flex-shrink: 0;
+      transition: transform 0.4s var(--ease), background 0.3s, border-color 0.3s, color 0.3s;
+    }
+    .pa-item.pa-open .pa-arrow {
+      transform: rotate(180deg);
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--navy);
+    }
+    .pa-header:hover .pa-arrow:not(.pa-item.pa-open .pa-arrow) {
+      border-color: rgba(15,212,180,0.4);
+      color: var(--teal);
+    }
+
+    .pa-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s var(--ease);
+    }
+
+    .pa-body-inner {
+      padding: 24px 28px 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .pa-desc {
+      font-size: 14.5px;
+      color: var(--white-70);
+      line-height: 1.72;
+      margin-bottom: 20px;
+    }
+
+    .pa-features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 40px;
+      margin-bottom: 24px;
+    }
+    .pa-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--white-70);
+      line-height: 1.5;
+    }
+    .pa-features li .check {
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+    .pa-features li.muted { color: var(--slate); }
+    .pa-features li.muted .check { color: var(--slate); }
+
+    .pa-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: var(--teal);
+      color: var(--navy);
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: all 0.3s var(--ease);
+    }
+    .pa-cta:hover {
+      background: #0fc8aa;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px var(--teal-glow);
+    }
+
+    @media (max-width: 768px) {
+      .pa-header { padding: 16px 20px; gap: 12px; }
+      .pa-body-inner { padding: 20px 20px 24px; }
+      .pa-title { font-size: 1rem; }
+      .pa-price-compact { display: none; }
+      .pa-features { grid-template-columns: 1fr; gap: 10px; }
+    }
+    @media (max-width: 500px) {
+      .pa-label { font-size: 9px; padding: 2px 8px; }
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       WEBSITE CARE PLAN
+    ════════════════════════════════════════════════════════════ */
+    #care-plan { background: var(--navy); }
+
+    .care-plan-card {
+      background: var(--navy-4);
+      border: 1px solid rgba(15,212,180,0.18);
+      border-radius: var(--r-lg);
+      padding: 56px 60px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 80px rgba(15,212,180,0.05), 0 24px 60px rgba(0,0,0,0.3);
+    }
+    .care-plan-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--teal) 40%, var(--teal) 60%, transparent);
+    }
+    .care-plan-card::after {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      background: rgba(15,212,180,0.04);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .care-plan-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .care-plan-headline {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 14px 0 12px;
+    }
+
+    .care-plan-sub {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--teal);
+      margin-bottom: 22px;
+      line-height: 1.4;
+    }
+
+    .care-plan-desc {
+      font-size: 15px;
+      color: var(--white-70);
+      line-height: 1.78;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .care-plan-features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px 36px;
+    }
+    .care-plan-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--white-70);
+      line-height: 1.5;
+    }
+    .care-plan-features li .check {
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+
+    .care-plan-price-box {
+      background: rgba(15,212,180,0.07);
+      border: 1px solid rgba(15,212,180,0.28);
+      border-radius: var(--r-lg);
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .care-plan-price-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    }
+
+    .care-plan-price-icon {
+      font-size: 22px;
+      color: var(--teal);
+      margin-bottom: 18px;
+      display: block;
+      text-shadow: 0 0 20px rgba(15,212,180,0.5);
+    }
+
+    .care-plan-price-text {
+      font-size: 15px;
+      color: var(--white-70);
+      line-height: 1.78;
+      margin-bottom: 32px;
+    }
+
+    .care-plan-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 24px;
+      background: var(--teal);
+      color: var(--navy);
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: all 0.3s var(--ease);
+    }
+    .care-plan-cta:hover {
+      background: #0fc8aa;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px var(--teal-glow);
+    }
+
+    @media (max-width: 960px) {
+      .care-plan-inner { grid-template-columns: 1fr; gap: 40px; }
+      .care-plan-card { padding: 44px 40px; }
+    }
+    @media (max-width: 768px) {
+      .care-plan-card { padding: 32px 24px; }
+      .care-plan-features { grid-template-columns: 1fr; gap: 12px; }
+    }
+    @media (max-width: 500px) {
+      .care-plan-card { padding: 28px 16px; }
+    }
+
+    /* ════════════════════════════════════════════════════════════
        RESPONSIVE
     ════════════════════════════════════════════════════════════ */
     @media (max-width: 1100px) {
