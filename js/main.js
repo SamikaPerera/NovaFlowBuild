@@ -12,8 +12,8 @@
       requestAnimationFrame(animCursor)
     })()
     document.querySelectorAll('a,button,.budget-opt,.check-item').forEach(el => {
-      el.addEventListener('mouseenter', () => { ring.style.width='48px';ring.style.height='48px';ring.style.borderColor='rgba(15,212,180,0.7)' })
-      el.addEventListener('mouseleave', () => { ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(15,212,180,0.5)' })
+      el.addEventListener('mouseenter', () => { ring.style.width='48px';ring.style.height='48px';ring.style.borderColor='rgba(108,99,255,0.7)' })
+      el.addEventListener('mouseleave', () => { ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(108,99,255,0.5)' })
     })
   }
 
@@ -237,6 +237,31 @@
       })
       priceSymbols.forEach(el => { el.textContent = cur.symbol })
     })
+  }
+
+  // ── Count-up stats ───────────────────────────────────────────
+  const statEls = document.querySelectorAll('.stat-num[data-count]')
+  if (statEls.length) {
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return
+        const el = entry.target
+        const target = parseInt(el.dataset.count, 10)
+        const duration = 1400
+        const start = performance.now()
+        function step(now) {
+          const elapsed = now - start
+          const progress = Math.min(elapsed / duration, 1)
+          const ease = 1 - Math.pow(1 - progress, 3)
+          el.textContent = Math.floor(ease * target)
+          if (progress < 1) requestAnimationFrame(step)
+          else el.textContent = target
+        }
+        requestAnimationFrame(step)
+        countObserver.unobserve(el)
+      })
+    }, { threshold: 0.5 })
+    statEls.forEach(el => countObserver.observe(el))
   }
 
   // ── Smooth scroll for anchor links ──────────────────────────
