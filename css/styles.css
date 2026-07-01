@@ -1244,42 +1244,6 @@
     ════════════════════════════════════════════════════════════ */
     #pricing { background: var(--navy); }
 
-    .currency-switcher {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 36px;
-    }
-    .currency-label {
-      font-size: 12px;
-      font-family: var(--mono);
-      letter-spacing: 0.1em;
-      color: var(--slate);
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .currency-select {
-      background: var(--navy-3);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      color: var(--white);
-      font-size: 13px;
-      font-family: var(--mono);
-      padding: 8px 36px 8px 14px;
-      cursor: pointer;
-      outline: none;
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230fd4b4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .currency-select:hover { border-color: var(--teal); }
-    .currency-select:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(15,212,180,0.15); }
-    .currency-select option { background: #0f1a2e; color: var(--white); }
-
     .pricing-grid {
       display: flex;
       flex-direction: column;
@@ -1399,18 +1363,6 @@
     }
     .plan-price {
       margin-bottom: 8px;
-    }
-    .price-amount {
-      font-family: var(--serif);
-      font-size: 3rem;
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-    .price-currency {
-      font-size: 1.2rem;
-      vertical-align: top;
-      margin-top: 8px;
-      display: inline-block;
     }
     .price-period {
       font-size: 13px;
@@ -2261,19 +2213,6 @@
       flex-shrink: 0;
     }
 
-    .pa-price-compact {
-      font-size: 13px;
-      color: var(--slate);
-      white-space: nowrap;
-    }
-    .pa-price-compact strong {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      color: var(--white);
-      font-weight: 400;
-      letter-spacing: -0.02em;
-    }
-
     .pa-arrow {
       width: 30px;
       height: 30px;
@@ -2362,7 +2301,6 @@
       .pa-header { padding: 16px 20px; gap: 12px; }
       .pa-body-inner { padding: 20px 20px 24px; }
       .pa-title { font-size: 1rem; }
-      .pa-price-compact { display: none; }
       .pa-features { grid-template-columns: 1fr; gap: 10px; }
     }
     @media (max-width: 500px) {

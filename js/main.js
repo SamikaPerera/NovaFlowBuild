@@ -198,35 +198,6 @@
     })
   })
 
-  // ── Currency switcher ────────────────────────────────────────
-  const CURRENCIES = {
-    USD: { rate: 1,     symbol: 'US$' },
-    NZD: { rate: 1.69,  symbol: 'NZ$' },
-    AUD: { rate: 1.52,  symbol: 'A$'  },
-    GBP: { rate: 0.79,  symbol: '£'   },
-    EUR: { rate: 0.92,  symbol: '€'   },
-    LKR: { rate: 330,   symbol: 'Rs'  },
-    SGD: { rate: 1.35,  symbol: 'S$'  },
-    CAD: { rate: 1.37,  symbol: 'CA$' },
-  }
-  const currencySelect = document.getElementById('currency-select')
-  const priceAmounts   = document.querySelectorAll('.price-amount[data-usd]')
-  const priceSymbols   = document.querySelectorAll('.price-currency')
-
-  function fmt(n) {
-    return n >= 1000 ? n.toLocaleString('en', { maximumFractionDigits: 0 }) : Math.round(n).toString()
-  }
-
-  if (currencySelect) {
-    currencySelect.addEventListener('change', () => {
-      const cur = CURRENCIES[currencySelect.value]
-      priceAmounts.forEach(el => {
-        el.textContent = fmt(parseFloat(el.dataset.usd) * cur.rate)
-      })
-      priceSymbols.forEach(el => { el.textContent = cur.symbol })
-    })
-  }
-
   // ── Count-up stats ───────────────────────────────────────────
   const statEls = document.querySelectorAll('.stat-num[data-count]')
   if (statEls.length) {
