@@ -165,7 +165,7 @@
     btn.style.opacity = '0.7'
 
     const link = document.createElement('a')
-    link.href = 'mailto:novaflowbuil@gmail.com?subject=' + subject + '&body=' + body
+    link.href = 'mailto:novaflowbuild@gmail.com?subject=' + subject + '&body=' + body
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
