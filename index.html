@@ -13,6 +13,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <!-- <link rel="stylesheet" href="css/chatbot.css" /> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() { emailjs.init('ThFSkIurfTuOir9dj') })()
+  </script>
 </head>
 <body>
 
@@ -696,16 +701,19 @@
             <div class="form-group">
               <label>FIRST NAME *</label>
               <input type="text" name="fname" placeholder="Alex" required />
+              <span class="field-error"></span>
             </div>
             <div class="form-group">
               <label>LAST NAME *</label>
               <input type="text" name="lname" placeholder="Johnson" required />
+              <span class="field-error"></span>
             </div>
           </div>
 
           <div class="form-group">
             <label>EMAIL ADDRESS *</label>
             <input type="email" name="email" placeholder="alex@yourcompany.com" required />
+            <span class="field-error"></span>
           </div>
 
           <div class="form-group">
@@ -728,6 +736,7 @@
               <option value="care-plan">Website Care Plan</option>
               <option value="other">Other / Not Sure Yet</option>
             </select>
+            <span class="field-error"></span>
           </div>
 
           <div class="form-group">
@@ -762,18 +771,21 @@
           <div class="form-group">
             <label>TELL US ABOUT YOUR PROJECT *</label>
             <textarea name="message" placeholder="Describe your project, goals, any references or competitors you like, and anything else relevant..." required></textarea>
+            <span class="field-error"></span>
           </div>
 
           <button type="submit" class="form-submit">
             Send My Project Brief →
           </button>
+          <p class="form-error-general"></p>
           <div class="form-privacy">🔒 Your details are private. No spam, ever.</div>
         </form>
 
         <div class="form-success" id="form-success">
           <div class="success-icon">✓</div>
-          <div class="success-title">Brief received!</div>
-          <p class="success-sub">Thanks for reaching out. We'll review your project and get back to you within 24 hours with a personalised quote.</p>
+          <div class="success-title">Message Sent!</div>
+          <p class="success-sub">Thank you! We will get back to you within 24 hours.</p>
+          <button type="button" class="form-submit-secondary" id="form-reset-btn">Send Another Message</button>
         </div>
       </div>
     </div>

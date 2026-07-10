@@ -129,61 +129,109 @@
   })
 
   // ── Quote form ───────────────────────────────────────────────
-  const form    = document.getElementById('quote-form')
-  const success = document.getElementById('form-success')
+  const form      = document.getElementById('quote-form')
+  const success   = document.getElementById('form-success')
+  const resetBtn  = document.getElementById('form-reset-btn')
+  const generalErr = form.querySelector('.form-error-general')
+  const emailRe   = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
+  function fieldError(field) {
+    const group = field.closest('.form-group')
+    return group ? group.querySelector('.field-error') : null
+  }
+
+  function showFieldError(field, message) {
+    field.classList.add('field-invalid')
+    field.classList.add('shake')
+    setTimeout(() => field.classList.remove('shake'), 500)
+    const err = fieldError(field)
+    if (err) { err.textContent = message; err.classList.add('visible') }
+  }
+
+  function clearFieldError(field) {
+    field.classList.remove('field-invalid')
+    const err = fieldError(field)
+    if (err) { err.classList.remove('visible'); err.textContent = '' }
+  }
+
+  function validateForm() {
     let valid = true
     form.querySelectorAll('[required]').forEach(field => {
       if (!field.value.trim()) {
-        field.style.borderColor = '#ef4444'
-        field.style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.15)'
+        showFieldError(field, 'This field is required.')
         valid = false
-        setTimeout(() => { field.style.borderColor=''; field.style.boxShadow='' }, 2500)
+      } else if (field.type === 'email' && !emailRe.test(field.value.trim())) {
+        showFieldError(field, 'Please enter a valid email address.')
+        valid = false
+      } else {
+        clearFieldError(field)
       }
     })
-    if (!valid) return
+    return valid
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    generalErr.classList.remove('visible')
+
+    if (!validateForm()) return
+
+    const btn = form.querySelector('.form-submit')
+    const btnOriginalText = btn.textContent
+    btn.textContent = 'Sending...'
+    btn.style.opacity = '0.7'
+    btn.disabled = true
 
     const d = new FormData(form)
     const get = k => d.get(k) || ''
-    const svcs = d.getAll('svc').join(', ') || 'None selected'
+    const templateParams = {
+      to_email: 'novaflowbuild@gmail.com',
+      from_name: (get('fname') + ' ' + get('lname')).trim(),
+      from_email: get('email'),
+      reply_to: get('email'),
+      company: get('company'),
+      project_type: get('project_type'),
+      services: d.getAll('svc').join(', ') || 'None selected',
+      timeline: get('timeline'),
+      message: get('message')
+    }
 
-    const subject = encodeURIComponent('Project Brief from ' + get('fname') + ' ' + get('lname'))
-    const body = encodeURIComponent(
-      'Name: ' + get('fname') + ' ' + get('lname') + '\n' +
-      'Email: ' + get('email') + '\n' +
-      'Company: ' + get('company') + '\n' +
-      'Project Type: ' + get('project_type') + '\n' +
-      'Services: ' + svcs + '\n' +
-      'Timeline: ' + get('timeline') + '\n\n' +
-      'Message:\n' + get('message')
-    )
-
-    const btn = form.querySelector('.form-submit')
-    btn.textContent = 'Opening email...'
-    btn.style.opacity = '0.7'
-
-    const link = document.createElement('a')
-    link.href = 'mailto:novaflowbuild@gmail.com?subject=' + subject + '&body=' + body
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-
-    setTimeout(() => {
-      form.style.transition = 'opacity 0.4s'
-      form.style.opacity    = '0'
-      setTimeout(() => {
-        form.style.display    = 'none'
-        success.classList.add('visible')
-      }, 400)
-    }, 800)
+    emailjs.send('service_xzbh7j6', 'template_e9u8jyn', templateParams)
+      .then(() => {
+        form.style.transition = 'opacity 0.4s'
+        form.style.opacity    = '0'
+        setTimeout(() => {
+          form.style.display = 'none'
+          success.classList.add('visible')
+        }, 400)
+      })
+      .catch(err => {
+        console.error('EmailJS send failed:', err)
+        generalErr.textContent = 'Something went wrong. Please try again or WhatsApp us on 022 508 1575'
+        generalErr.classList.add('visible')
+      })
+      .finally(() => {
+        btn.textContent = btnOriginalText
+        btn.style.opacity = ''
+        btn.disabled = false
+      })
   })
 
   // Reset field error on input
   form.querySelectorAll('input,select,textarea').forEach(f => {
-    f.addEventListener('input', () => { f.style.borderColor=''; f.style.boxShadow='' })
+    f.addEventListener('input', () => clearFieldError(f))
   })
+
+  // "Send Another Message" — reset and show the form again
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      form.reset()
+      form.querySelectorAll('input,select,textarea').forEach(f => clearFieldError(f))
+      success.classList.remove('visible')
+      form.style.display = ''
+      requestAnimationFrame(() => { form.style.opacity = '1' })
+    })
+  }
 
   // ── Portfolio expand ─────────────────────────────────────────
   document.querySelectorAll('.portfolio-card').forEach(card => {
