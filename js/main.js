@@ -211,6 +211,7 @@
         setTimeout(() => {
           form.style.display = 'none'
           success.classList.add('visible')
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' })
         }, 400)
       })
       .catch(err => {

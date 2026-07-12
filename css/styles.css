@@ -1880,6 +1880,19 @@
     }
     .form-submit-secondary:active { transform: translateY(0); }
 
+    @media (max-width: 640px) {
+      .form-success { width: 100%; }
+      .success-icon {
+        width: 104px; height: 104px;
+        font-size: 42px;
+      }
+      .success-title { font-size: 1.9rem; line-height: 1.25; }
+      .success-sub { font-size: 14.5px; }
+      .success-summary { padding: 20px 18px; gap: 14px; }
+      .success-summary-label { font-size: 12px; }
+      .success-summary-value { font-size: 14.5px; }
+    }
+
     @media (max-width: 500px) {
       .success-summary-row { flex-direction: column; gap: 4px; }
       .success-summary-value { text-align: left; }
@@ -2635,7 +2648,7 @@
       .services-check { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .quote-form { padding: 28px 20px; }
-      .form-success { padding: 28px 20px; }
+      .form-success { padding: 40px 20px; }
       .pricing-card { padding: 24px 20px; }
       .price-amount { font-size: 2.4rem; }
       .monthly-left { padding: 28px 20px 20px; }
@@ -2660,7 +2673,7 @@
       .hero-scroll { display: none; }
       .section { padding: 64px 0; }
       .quote-form { padding: 20px 16px; }
-      .form-success { padding: 20px 16px; }
+      .form-success { padding: 36px 16px; }
       .pricing-project-row, .pricing-card-monthly { max-width: 100%; }
       .pricing-card { padding: 20px 16px; }
       .price-amount { font-size: 2rem; }
