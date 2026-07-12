@@ -184,20 +184,28 @@
 
     const d = new FormData(form)
     const get = k => d.get(k) || ''
+    const fullName = (get('fname') + ' ' + get('lname')).trim()
+    const services = d.getAll('svc').join(', ') || 'None selected'
     const templateParams = {
       to_email: 'novaflowbuild@gmail.com',
-      from_name: (get('fname') + ' ' + get('lname')).trim(),
+      from_name: fullName,
       from_email: get('email'),
       reply_to: get('email'),
       company: get('company'),
-      project_type: get('project_type'),
-      services: d.getAll('svc').join(', ') || 'None selected',
+      services: services,
       timeline: get('timeline'),
       message: get('message')
     }
 
     emailjs.send('service_xzbh7j6', 'template_e9u8jyn', templateParams)
       .then(() => {
+        const summaryName     = success.querySelector('#summary-name')
+        const summaryEmail    = success.querySelector('#summary-email')
+        const summaryServices = success.querySelector('#summary-services')
+        if (summaryName)     summaryName.textContent     = fullName
+        if (summaryEmail)    summaryEmail.textContent    = get('email')
+        if (summaryServices) summaryServices.textContent = services
+
         form.style.transition = 'opacity 0.4s'
         form.style.opacity    = '0'
         setTimeout(() => {
@@ -222,7 +230,7 @@
     f.addEventListener('input', () => clearFieldError(f))
   })
 
-  // "Send Another Message" — reset and show the form again
+  // "Send Another Enquiry" — reset and show the form again
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       form.reset()

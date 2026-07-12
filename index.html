@@ -722,25 +722,7 @@
           </div>
 
           <div class="form-group">
-            <label>PROJECT TYPE *</label>
-            <select name="project_type" required>
-              <option value="" disabled selected>Select your project type</option>
-              <option value="website">Website Development</option>
-              <option value="custom-app">Custom Application</option>
-              <option value="ai-chatbot">AI Chatbot</option>
-              <option value="automation">Workflow Automation</option>
-              <option value="google-business">Google Business Setup</option>
-              <option value="seo">SEO Setup</option>
-              <option value="landing-page">Landing Page</option>
-              <option value="whatsapp">WhatsApp Business Setup</option>
-              <option value="care-plan">Website Care Plan</option>
-              <option value="other">Other / Not Sure Yet</option>
-            </select>
-            <span class="field-error"></span>
-          </div>
-
-          <div class="form-group">
-            <label>SERVICES NEEDED</label>
+            <label>WHAT DO YOU NEED?</label>
             <div class="services-check">
               <label class="check-item"><input type="checkbox" name="svc" value="Website Development"><div class="check-box">✓</div>Website Development</label>
               <label class="check-item"><input type="checkbox" name="svc" value="AI Chatbot"><div class="check-box">✓</div>AI Chatbot</label>
@@ -783,9 +765,27 @@
 
         <div class="form-success" id="form-success">
           <div class="success-icon">✓</div>
-          <div class="success-title">Message Sent!</div>
-          <p class="success-sub">Thank you! We will get back to you within 24 hours.</p>
-          <button type="button" class="form-submit-secondary" id="form-reset-btn">Send Another Message</button>
+          <div class="success-title">We've received your enquiry!</div>
+          <p class="success-sub">Thank you for reaching out. We will review your details and get back to you within 24 hours with a personalised quote.</p>
+          <div class="success-divider"></div>
+          <div class="success-summary">
+            <div class="success-summary-row">
+              <span class="success-summary-label">Name</span>
+              <span class="success-summary-value" id="summary-name"></span>
+            </div>
+            <div class="success-summary-row">
+              <span class="success-summary-label">Email</span>
+              <span class="success-summary-value" id="summary-email"></span>
+            </div>
+            <div class="success-summary-row">
+              <span class="success-summary-label">Services</span>
+              <span class="success-summary-value" id="summary-services"></span>
+            </div>
+          </div>
+          <div class="success-actions">
+            <a href="https://wa.me/64225081575" target="_blank" rel="noopener" class="success-whatsapp-btn">WhatsApp Us Now</a>
+            <button type="button" class="form-submit-secondary" id="form-reset-btn">Send Another Enquiry</button>
+          </div>
         </div>
       </div>
     </div>
